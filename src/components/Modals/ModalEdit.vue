@@ -4,14 +4,16 @@
       <div class="modal">
         <header>Изменение элемента</header>
         <main>
-          <form action="submit" @submit.prevent="changeElement">
+          <form id="form" action="submit" @submit.prevent="changeElement">
             <div class="input-wrapper">
-              <label for="name">Новое имя:</label>
+              <label for="name">Новое имя <span v-if="type=='editUser'">пользователя</span>
+                <span v-else>компании</span>:</label>
               <input name="name" type="text" v-model="name" />
             </div>
 
             <div class="input-wrapper">
-              <label for="date">Новая дата:</label>
+              <label for="date">Новая дата <span v-if="type=='editUser'">рождения</span>
+                <span v-else>создания</span>:</label>
               <input name="date" type="date" v-model="date" />
             </div>
 

@@ -6,12 +6,23 @@
         <main>
           <form id="form" action="submit" @submit.prevent="addElement">
             <div class="input-wrapper">
-              <label for="name">Введите имя:</label>
-              <input name="name" type="text" v-model="name" placeholder="Имя" onfocus="this.placeholder=''" onblur="this.placeholder='Имя'"/>
+              <label for="name">Введите имя 
+                <span v-if="type=='addUser'">пользователя</span>
+                <span v-else>компании</span>:
+            </label>
+              <input
+                name="name"
+                type="text"
+                v-model="name"
+                placeholder="Имя"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='Имя'"
+              />
             </div>
 
             <div class="input-wrapper">
-              <label for="date">Введите дату:</label>
+              <label for="date">Введите дату <span v-if="type=='addUser'">рождения</span>
+                <span v-else>создания</span>:</label>
               <input name="date" type="date" v-model="date" />
             </div>
 
@@ -31,8 +42,16 @@
         </main>
         <footer class="modal__footer">
           <div class="input-wrapper">
-            <button class="cancel__button" type="button" @click="$emit('close')">Отмена</button>
-            <button class="submit__button" type="submit" form="form" >Добавить</button>
+            <button
+              class="cancel__button"
+              type="button"
+              @click="$emit('close')"
+            >
+              Отмена
+            </button>
+            <button class="submit__button" type="submit" form="form">
+              Добавить
+            </button>
           </div>
         </footer>
       </div>
@@ -125,14 +144,15 @@ export default defineComponent({
 
   header {
     margin: 20px auto;
-    padding: 0 30px
+    padding: 0 30px;
   }
 
   label {
     display: inline-block;
   }
 
-  select, input {
+  select,
+  input {
     min-width: 45%;
     border: 1px solid #ebebeb;
     border-radius: 8px;
@@ -144,11 +164,11 @@ export default defineComponent({
 }
 
 .input-wrapper {
-    margin: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    flex: 1 1 150px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1 1 150px;
 }
 </style>
