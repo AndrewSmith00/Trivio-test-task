@@ -1,0 +1,98 @@
+.content-wrapper {
+  width: 90%;
+  height: 60vh;
+  margin: 0 auto;
+}
+
+h3 {
+  padding-bottom: 40px;
+}
+
+/* -- Styling single block of content, like user block -- */
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: 3px solid rgb(139, 160, 252);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.content > div {
+  flex: 1 1 100px;
+  padding: 10px 0;
+  margin: 0 10px;
+}
+
+/* --------------- Styling buttons ---------------- */
+.submit__button,
+.cancel__button,
+.adding__button,
+.editing__button,
+.deleting__button {
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 7px 7px 7px 0;
+  background-color: inherit;
+  cursor: pointer;
+  color: inherit;
+  transition: 0.4s;
+  padding: 7px;
+}
+
+.submit__button {
+  background-color: rgb(62, 65, 245);
+  border: 1px solid rgb(110, 128, 228);
+  color: #fff;
+}
+
+.cancel__button {
+  border: 1px solid #fff;
+}
+
+.editing__button {
+  border: 1px solid #4835f3;
+}
+
+.adding__button {
+  border: none;
+  margin: 20px 10px;
+}
+
+.deleting__button {
+  background-color: rgb(226, 78, 78);
+  border: 1px solid rgb(192, 0, 0);
+  color: #fff;
+}
+
+.submit__button:hover {
+  background-color: #298dff;
+}
+
+.cancel__button:hover {
+  background-color: #ebebeb;
+}
+
+.editing__button:hover {
+  background-color: #e7edff;
+}
+
+.adding__button:hover {
+  background-color: rgb(218, 216, 231);
+}
+
+.deleting__button:hover {
+  background-color: rgb(235, 117, 117);
+}
+
+/* ----- Styling fields for company and useer -------- */
+
+.name,
+.date, 
+.user__company {
+  font-size: 18px;
+  font-weight: 600;
+}
