@@ -1,6 +1,6 @@
 # trivio-test
 Site using vuex, vue router and modal windows.
-https://calm-lebkuchen-fb7c4c.netlify.app/companies
+https://radiant-sable-59394b.netlify.app/
 
 ## Project setup
 ```
