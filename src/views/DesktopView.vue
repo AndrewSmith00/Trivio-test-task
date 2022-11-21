@@ -2,7 +2,7 @@
   <div class="content-wrapper">
     <h2>Рабочий стол</h2>
 
-    <div class="content">
+    <div class="content content_block">
       <h3>Командировки легко и без переплат</h3>
 
       <p>
@@ -24,6 +24,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+.content_block {
+  display: block;
+}
 
 p {
   padding-bottom: 20px;
